@@ -1,5 +1,4 @@
 package student;
-
 /**
  * AlohaWorld is a simple greeter program that takes in input from the client, and greets them with
  * different greetings.
