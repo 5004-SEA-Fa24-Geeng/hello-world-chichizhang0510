@@ -15,10 +15,14 @@ classDiagram
     ConsoleView --> Greeter : uses
     
     class AlohaWorld {
+        -AlohaWorld()
         +main(String[] args)
     }
     
     class ConsoleView {
+        -final Scanner SCANNER
+        -final List<String> LOCALITY_OPTIONS
+        -ConsoleView()
         +static String getName()
         +static int getLocality()
         +static boolean checkRunAgain()
@@ -28,6 +32,11 @@ classDiagram
     class Greeter {
         -final String name
         -int locality
+        - List<String> localityList
+        - final int HAWAII
+        - final int CHINA
+        - final int ITALY
+        - final int DEFAULT_LOCALITY
         +Greeter(String name)
         +Greeter(String name, int locality)
         +String getName()
@@ -35,6 +44,9 @@ classDiagram
         +void setLocality(int locality)
         +String greet()
         +String greet(boolean asciiOnly)
+        +boolean equals(Object obj)
+        +String toString()
+        +List<String> getLocalityList()
     }
 ```
 
