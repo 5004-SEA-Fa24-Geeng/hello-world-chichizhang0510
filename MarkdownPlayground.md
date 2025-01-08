@@ -2,6 +2,7 @@
 
 Use this file to add example markdown elements you learned about by reading the markdown resources below. You need to add at least 3 different markdown elements you learned about, and a mermaid class diagram (of your choice does not have to follow the assignment. However, if you did use mermaid for the assignment, you can just copy that here). 
 
+
 Mermaid is a markdown language that allows you to create diagrams. You can find more information about mermaid in the resources below. It has become popular enough that github has included it as an option in their markdown.  For built in markdown readers, such as the one built into IntelliJ or VSCode, you may need to install a plugin to render the mermaid diagrams. 
 
 > [!NOTE]
@@ -21,3 +22,87 @@ Mermaid is a markdown language that allows you to create diagrams. You can find 
 
 <!-- start your playground code under this dashed line -->
 ----
+
+**This is the Header grammar.**
+
+# first header
+
+## second header
+
+### third header
+
+#### fourth header
+
+##### fifth header
+
+###### sixth header
+
+
+
+**This is the List grammar.**
+
+- point
+- point
+- point
+
+1. First point
+2. Second point
+3. Third point
+
+
+
+**This is the Code Block grammar.**
+
+```java
+public static void main(String[] args) {
+        String name = ConsoleView.getName();
+        int locality = ConsoleView.getLocality();
+
+        Greeter greeter = new Greeter(name, locality);
+        ConsoleView.printGreeting(greeter.greet());
+
+        while (!ConsoleView.checkRunAgain()) {
+            locality = ConsoleView.getLocality();
+            greeter.setLocality(locality);
+            ConsoleView.printGreeting(greeter.greet());
+        }
+
+    }
+```
+
+
+
+**This is the mermaid graph.**
+
+```mermaid
+classDiagram
+		direction LR
+    AlohaWorld --> ConsoleView : uses
+    AlohaWorld --> Greeter : has-a
+    ConsoleView --> Greeter : uses
+    
+    class AlohaWorld {
+        +main(String[] args)
+    }
+    
+    class ConsoleView {
+        +static String getName()
+        +static int getLocality()
+        +static boolean checkRunAgain()
+        +static void printGreeting(String greeting)
+    }
+    
+    class Greeter {
+        -final String name
+        -int locality
+        +Greeter(String name)
+        +Greeter(String name, int locality)
+        +String getName()
+        +int getLocality()
+        +void setLocality(int locality)
+        +String greet()
+        +String greet(boolean asciiOnly)
+    }
+```
+
+
