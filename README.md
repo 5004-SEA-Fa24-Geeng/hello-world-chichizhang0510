@@ -6,12 +6,12 @@
 
 How many hours did it take you to complete this assignment (estimate)? 
 
-- Maybe 1 hour.
+- Maybe 10 hour.
 
 Did you collaborate with any other students/TAs/Professors? If so, tell us who and in what
 capacity.
 
-- No, I did not.
+- Yes, with Professor and TAs figuring out how to submit to grade scope and autograde correctly.
 
 
   
