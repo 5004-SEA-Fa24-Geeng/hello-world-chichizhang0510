@@ -28,7 +28,7 @@ import java.util.List;
  * only focus on testing methods that are easier to test. </p>
  */
 public class GreeterTest {
-    // these are so i don't 'hardcode' the names in the tests
+    // these are so I don't 'hardcode' the names in the tests
 
     private static final String NAME_ONE = "John";
     private static final String NAME_TWO = "Alice";
@@ -39,10 +39,6 @@ public class GreeterTest {
     private static final Greeter greeter2 = new Greeter(NAME_ONE, 1);
     private static final Greeter greeter3 = new Greeter(NAME_ONE);
     private static final Greeter greeter4 = new Greeter(NAME_TWO, 3);
-
-
-
-
 
     /**
      * Tests the constructor, making sure it throws an exception if the locality is out of range
@@ -141,7 +137,7 @@ public class GreeterTest {
         assertEquals(4, greeter.getLocality());
 
         // This is a special assert that is checking to
-        // see if the method throws an exception of a certain type
+        // see if the method throws an exception to a certain type
         assertThrows(IllegalArgumentException.class, () -> {
             greeter.setLocality(5);
         });
